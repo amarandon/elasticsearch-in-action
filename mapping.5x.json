@@ -49,7 +49,10 @@
         "enabled" : true
       },
       "properties" : {
-        "organizer" : { "type" : "text" },
+        "organizer" : {
+            "type" : "text",
+            "fielddata" : true
+        },
         "name" : { "type" : "text" },
         "description" : {
           "type" : "text",
@@ -90,7 +93,10 @@
           "type" : "text",
           "term_vector": "with_positions_offsets"
         },
-        "attendees" : { "type" : "text" },
+        "attendees" : {
+          "type" : "text",
+          "fielddata": true
+        },
         "date" : {
           "type" : "date",
           "format" : "date_hour_minute"
